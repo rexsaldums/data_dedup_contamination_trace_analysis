@@ -1,4 +1,4 @@
-# leakage_trace_based_analysis_054a5f56
+# data_dedup_contamination_trace_analysis
 
 （AIGC场景）数据去重与污染检测与下游任务表现的分数能否预测下游表现？用泄漏与重复检测量化预测力，并列出反例。
 
@@ -15,9 +15,9 @@
 仅依赖 Python 标准库。
 
 ```bash
-python leakage_trace_based_analysis_054a5f56.py --help
-python leakage_trace_based_analysis_054a5f56.py --input sample.txt
-python leakage_trace_based_analysis_054a5f56.py --input sample.txt --json
+python data_dedup_contamination_trace_analysis.py --help
+python data_dedup_contamination_trace_analysis.py --input sample.txt
+python data_dedup_contamination_trace_analysis.py --input sample.txt --json
 ```
 
 输入文件按行解析。协议「轨迹分析」使用分隔符 `->` 区分标签与载荷。
@@ -50,7 +50,7 @@ python leakage_trace_based_analysis_054a5f56.py --input sample.txt --json
 ## 复现步骤
 
 1. 按上面的分隔符准备输入文件，每行一条样本；
-2. 运行 `python leakage_trace_based_analysis_054a5f56.py --input sample.txt --json`；
+2. 运行 `python data_dedup_contamination_trace_analysis.py --input sample.txt --json`；
 3. 记录运行环境、输入文件与完整输出；
 4. **未运行的指标不要引用**：本仓库只提供测量方法与判定规则，
    不预填任何实测数字。填入实测值前请确认对应命令与输入一致。
